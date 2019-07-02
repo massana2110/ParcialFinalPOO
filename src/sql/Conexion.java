@@ -17,9 +17,9 @@ import java.sql.SQLException;
 public class Conexion {
 
     private final String DRIVER = "org.postgresql.Driver";
-    private final String URL = "jdbc:postgresql://localhost:5432/Parcial";
+    private final String URL = "jdbc:postgresql://localhost:5432/ExamenFinal"; //Cambien lo ultimo por el nombre de su base
     private final String USERNAME = "postgres";
-    private final String PASSWORD = "Salamanders1"; 
+    private final String PASSWORD = ""; //Pongan aqui la contra.
     
     private Connection connection;
     

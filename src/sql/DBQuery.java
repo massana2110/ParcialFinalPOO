@@ -30,7 +30,7 @@ public class DBQuery {
     
     public boolean registrarUsuario(String username, String password) throws SQLException{
 
-        String query = "INSERT INTO usuario (username, contraseña) VALUES (?,?)";
+        String query = "INSERT INTO usuario (usuario, contraseña) VALUES (?,?)";
         String hashPass = MD5(password);
         try{
             Connection con = conexion.getConnection();
@@ -52,7 +52,7 @@ public class DBQuery {
     public Usuario login(String username, String password) throws SQLException{
         boolean flag = false;
         Usuario usuario = new Usuario();
-        String query = "SELECT * FROM usuario WHERE username = ? AND  contraseña = ?";
+        String query = "SELECT * FROM usuario WHERE usuario = ? AND contraseña = ?";
         try{
             Connection con = conexion.getConnection();
             PreparedStatement ps = con.prepareStatement(query);
@@ -61,7 +61,7 @@ public class DBQuery {
             ResultSet rs = ps.executeQuery();
             
             while(rs.next()){
-                usuario.setUsername(rs.getString("username"));
+                usuario.setUsername(rs.getString("usuario"));
                 usuario.setPassword(rs.getString("contraseña"));
                 flag = true;
             }
@@ -74,34 +74,25 @@ public class DBQuery {
     }
     
  
- 
-    
-    public boolean añadirCuenta (String nombre,String tipoTarjeta ,double unSaldo) throws SQLException{
-        Connection con = conexion.getConnection();
-        boolean isSuccess = false;
-        String query = "INSERT INTO cuenta (nombre, tipo_tarjeta, saldo) VALUES (?,?,?)";
-        
+    public boolean añadirRonda(int p1, int p2, int p3) throws SQLException{
+        String query = "INSERT INTO ronda (p1,p2,p3) VALUES (?,?,?)";
         try{
+            Connection con = conexion.getConnection();
             PreparedStatement ps = con.prepareStatement(query);
-            ps.setString(1, nombre);
-            ps.setString(2, tipoTarjeta);
-            ps.setDouble(3, unSaldo);
+            ps.setInt(1, p1);
+            ps.setInt(2, p2);
+            ps.setInt(3, p3);
             
-            if(ps.executeUpdate() > 0){
-                isSuccess = true;
+            if (ps.executeUpdate() > 0) {
+                return true;
             }
-        } catch(Exception error){
-            isSuccess = false;
-            error.printStackTrace();
-            
-        } 
-        
-        return true;   
-} 
+        } catch(SQLException e){
+            e.printStackTrace();
+            return false;
+        }
+        return false;
+    }
     
-
-    
-  
     
     public String MD5(String md5){
         try{

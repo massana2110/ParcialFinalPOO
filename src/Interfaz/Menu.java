@@ -12,7 +12,8 @@ import entidades.Usuario;
  * @author Frognas
  */
 public class Menu extends javax.swing.JFrame {
-     private Usuario user;
+    
+    private Usuario user;
 
     /**
      * Creates new form Menu
@@ -82,6 +83,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void jLabelCerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCerrarSesionMouseClicked
         // TODO add your handling code here:
+        user = null;
         new Login().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jLabelCerrarSesionMouseClicked

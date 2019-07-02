@@ -5,12 +5,16 @@
  */
 package Interfaz;
 
+import entidades.Ronda;
+
 /**
  *
  * @author Frognas
  */
 public class IngresarPuntajes extends javax.swing.JFrame {
 
+    private int num0, num1, num2, num3, num4, num5, num6, num7, num8, num9, num10;
+    private Ronda ronda = new Ronda();
     /**
      * Creates new form IngresarPuntajes
      */
@@ -28,20 +32,16 @@ public class IngresarPuntajes extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabelDiana = new javax.swing.JLabel();
-        jLabelBoton1 = new javax.swing.JLabel();
-        jLabelBoton2 = new javax.swing.JLabel();
-        jLabelBoton3 = new javax.swing.JLabel();
-        jLabelBoton4 = new javax.swing.JLabel();
-        jLabelBoton5 = new javax.swing.JLabel();
-        jLabelBoton6 = new javax.swing.JLabel();
-        jLabelBoton7 = new javax.swing.JLabel();
-        jLabelBoton8 = new javax.swing.JLabel();
-        jLabelBoton9 = new javax.swing.JLabel();
-        jLabelBoton10 = new javax.swing.JLabel();
         jLabelRonda = new javax.swing.JLabel();
         jLabelInsertarPuntaje1 = new javax.swing.JLabel();
-        jLabelBoton0 = new javax.swing.JLabel();
         jLabelBoton11 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBox3 = new javax.swing.JComboBox<>();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,48 +50,15 @@ public class IngresarPuntajes extends javax.swing.JFrame {
         jLabelDiana.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/DianaF.png"))); // NOI18N
         getContentPane().add(jLabelDiana, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 30, 500, 590));
 
-        jLabelBoton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/1.png"))); // NOI18N
-        getContentPane().add(jLabelBoton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
-
-        jLabelBoton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/2.png"))); // NOI18N
-        getContentPane().add(jLabelBoton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, -1, -1));
-
-        jLabelBoton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/3.png"))); // NOI18N
-        getContentPane().add(jLabelBoton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, -1, -1));
-
-        jLabelBoton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/4.png"))); // NOI18N
-        getContentPane().add(jLabelBoton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
-
-        jLabelBoton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/5.1.png"))); // NOI18N
-        getContentPane().add(jLabelBoton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, -1, -1));
-
-        jLabelBoton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/6.png"))); // NOI18N
-        getContentPane().add(jLabelBoton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, -1, -1));
-
-        jLabelBoton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/7.png"))); // NOI18N
-        getContentPane().add(jLabelBoton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, -1, -1));
-
-        jLabelBoton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/8.png"))); // NOI18N
-        getContentPane().add(jLabelBoton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, -1, -1));
-
-        jLabelBoton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/9.png"))); // NOI18N
-        getContentPane().add(jLabelBoton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, -1, -1));
-
-        jLabelBoton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/10.png"))); // NOI18N
-        getContentPane().add(jLabelBoton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 450, -1, -1));
-
         jLabelRonda.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabelRonda.setForeground(new java.awt.Color(255, 255, 255));
         jLabelRonda.setText("Ronda ");
-        getContentPane().add(jLabelRonda, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 590, 360, 80));
+        getContentPane().add(jLabelRonda, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 590, 160, 80));
 
         jLabelInsertarPuntaje1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabelInsertarPuntaje1.setForeground(new java.awt.Color(255, 255, 255));
         jLabelInsertarPuntaje1.setText("Inserte su puntaje :");
-        getContentPane().add(jLabelInsertarPuntaje1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 360, 80));
-
-        jLabelBoton0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/0.png"))); // NOI18N
-        getContentPane().add(jLabelBoton0, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, -1, -1));
+        getContentPane().add(jLabelInsertarPuntaje1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 460, 80));
 
         jLabelBoton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Regresar.png"))); // NOI18N
         jLabelBoton11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -101,66 +68,84 @@ public class IngresarPuntajes extends javax.swing.JFrame {
         });
         getContentPane().add(jLabelBoton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 580, -1, -1));
 
+        jButton1.setText("INSERTAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 130, 50));
+
+        jLabel1.setBackground(new java.awt.Color(255, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setText("Flecha 1:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 110, 70));
+
+        jLabel2.setBackground(new java.awt.Color(0, 0, 255));
+        jLabel2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel2.setText("Flecha 2:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 110, 60));
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 0));
+        jLabel3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel3.setText("Flecha 3: ");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 110, 50));
+
+        jComboBox1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 60, 50));
+
+        jComboBox2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 60, 50));
+
+        jComboBox3.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, 60, 50));
+
+        jLabelFondo.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo.png"))); // NOI18N
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void refrescar(){
+        jLabelInsertarPuntaje1.setText("");
+    }
+    
+    private void getFlechas(){
+        for (int i = 1; i <= 3; i++) {
+            refrescar();
+            jLabelRonda.setText("");
+
+        }
+    }
     private void jLabelBoton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBoton11MouseClicked
         // TODO add your handling code here:
         
         this.setVisible(false);
     }//GEN-LAST:event_jLabelBoton11MouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(IngresarPuntajes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(IngresarPuntajes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(IngresarPuntajes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(IngresarPuntajes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new IngresarPuntajes().setVisible(true);
-            }
-        });
-    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabelBoton0;
-    private javax.swing.JLabel jLabelBoton1;
-    private javax.swing.JLabel jLabelBoton10;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelBoton11;
-    private javax.swing.JLabel jLabelBoton2;
-    private javax.swing.JLabel jLabelBoton3;
-    private javax.swing.JLabel jLabelBoton4;
-    private javax.swing.JLabel jLabelBoton5;
-    private javax.swing.JLabel jLabelBoton6;
-    private javax.swing.JLabel jLabelBoton7;
-    private javax.swing.JLabel jLabelBoton8;
-    private javax.swing.JLabel jLabelBoton9;
     private javax.swing.JLabel jLabelDiana;
     private javax.swing.JLabel jLabelFondo;
     private javax.swing.JLabel jLabelInsertarPuntaje1;

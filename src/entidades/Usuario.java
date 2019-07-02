@@ -12,14 +12,24 @@ package entidades;
  */
 public class Usuario {
 
+    private int idUsuario;
     private String username;
     private String password;
     
     public Usuario(){}
     
-    public Usuario(String username, String password){
+    public Usuario(int idUsuario, String username, String password){
+        this.idUsuario = idUsuario;
         this.username = username;
         this.password = password;
+    }
+
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getUsername() {
