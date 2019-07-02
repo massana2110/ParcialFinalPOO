@@ -5,11 +5,6 @@
  */
 package Interfaz;
 
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartFrame;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.data.category.DefaultCategoryDataset;
 
 /**
  *
@@ -22,28 +17,10 @@ public class Reportes extends javax.swing.JFrame {
      */
     public Reportes() {
         initComponents();
-        generarBarras();
+        
     }
 
-   public static void generarBarras(){
-        try{
-            DefaultCategoryDataset ds= new DefaultCategoryDataset();
-            ds.addValue(20, "Gabriel", "");
-            ds.addValue(10, "esta", "");
-            
-            JFreeChart jf= ChartFactory.createBarChart("Alumnos", "Nombres",
-                    "Edades", ds, PlotOrientation.VERTICAL, true, true, true);
-            ChartFrame f=new ChartFrame("Edades",jf);
-            f.setSize(900,400);
-            f.setLocationRelativeTo(null);
-            f.setVisible(true);
-            
-            
-        }catch(Exception e){
-            System.out.println("Error "+e);
-        }
-    }
-    
+  
     
     
     
@@ -57,21 +34,61 @@ public class Reportes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabelReportes = new javax.swing.JLabel();
+        jLabelReportes1 = new javax.swing.JLabel();
+        jLabelReportes2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabelFondo = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelReportes.setFont(new java.awt.Font("Times New Roman", 3, 48)); // NOI18N
+        jLabelReportes.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelReportes.setText("Reportes:");
+        getContentPane().add(jLabelReportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
+
+        jLabelReportes1.setFont(new java.awt.Font("Times New Roman", 3, 48)); // NOI18N
+        jLabelReportes1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelReportes1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/arco.png"))); // NOI18N
+        getContentPane().add(jLabelReportes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, -10, -1, -1));
+
+        jLabelReportes2.setFont(new java.awt.Font("Times New Roman", 3, 48)); // NOI18N
+        jLabelReportes2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelReportes2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Regresar.png"))); // NOI18N
+        jLabelReportes2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelReportes2MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabelReportes2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 430, -1, -1));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 690, 160));
+
+        jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo1.png"))); // NOI18N
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabelReportes2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelReportes2MouseClicked
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabelReportes2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -109,5 +126,11 @@ public class Reportes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabelFondo;
+    private javax.swing.JLabel jLabelReportes;
+    private javax.swing.JLabel jLabelReportes1;
+    private javax.swing.JLabel jLabelReportes2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

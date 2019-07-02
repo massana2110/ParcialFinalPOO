@@ -40,13 +40,7 @@ public class Login extends javax.swing.JFrame {
     
     
     
-   public Image getIconImage(){
-       Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/Logo.png"));
-       return retValue;
-   } 
-    
-    
-    
+   
     
     
    
@@ -64,8 +58,10 @@ public class Login extends javax.swing.JFrame {
         jTextUsuario = new javax.swing.JTextField();
         jTextContraseña = new javax.swing.JPasswordField();
         jLabelIncorrecto = new javax.swing.JLabel();
-        jLabelIncorrecto1 = new javax.swing.JLabel();
-        jLabelIncorrecto2 = new javax.swing.JLabel();
+        jLabelArco = new javax.swing.JLabel();
+        jLabelContraseña = new javax.swing.JLabel();
+        jLabelUsuario = new javax.swing.JLabel();
+        jLabelUsuario1 = new javax.swing.JLabel();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -78,7 +74,7 @@ public class Login extends javax.swing.JFrame {
                 jLabelIniciarSesionMouseClicked(evt);
             }
         });
-        getContentPane().add(jLabelIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 260, 200, 80));
+        getContentPane().add(jLabelIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 300, 200, 80));
 
         jLabelCrearCuenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Crearcuenta.png"))); // NOI18N
         jLabelCrearCuenta.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -86,13 +82,13 @@ public class Login extends javax.swing.JFrame {
                 jLabelCrearCuentaMouseClicked(evt);
             }
         });
-        getContentPane().add(jLabelCrearCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 160, 200, 80));
+        getContentPane().add(jLabelCrearCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 200, 80));
 
         jTextUsuario.setBackground(new java.awt.Color(0, 28, 75));
         jTextUsuario.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jTextUsuario.setForeground(new java.awt.Color(255, 255, 255));
         jTextUsuario.setBorder(null);
-        getContentPane().add(jTextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 350, 30));
+        getContentPane().add(jTextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 350, 30));
 
         jTextContraseña.setBackground(new java.awt.Color(0, 28, 75));
         jTextContraseña.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -103,25 +99,35 @@ public class Login extends javax.swing.JFrame {
                 jTextContraseñaActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 360, 30));
+        getContentPane().add(jTextContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, 360, 30));
 
         jLabelIncorrecto.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
         jLabelIncorrecto.setForeground(new java.awt.Color(255, 255, 255));
         jLabelIncorrecto.setText("¡Usuario o contraseña incorrectos!");
-        getContentPane().add(jLabelIncorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, -1, -1));
+        getContentPane().add(jLabelIncorrecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, -1, -1));
 
-        jLabelIncorrecto1.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
-        jLabelIncorrecto1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelIncorrecto1.setText("Usuario:");
-        getContentPane().add(jLabelIncorrecto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, -1));
+        jLabelArco.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabelArco.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelArco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/arco.png"))); // NOI18N
+        getContentPane().add(jLabelArco, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, -30, -1, -1));
 
-        jLabelIncorrecto2.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
-        jLabelIncorrecto2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelIncorrecto2.setText("Contraseña:");
-        getContentPane().add(jLabelIncorrecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, -1, -1));
+        jLabelContraseña.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabelContraseña.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelContraseña.setText("Contraseña:");
+        getContentPane().add(jLabelContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, -1, -1));
 
-        jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo.png"))); // NOI18N
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabelUsuario.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabelUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelUsuario.setText("Usuario:");
+        getContentPane().add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, -1));
+
+        jLabelUsuario1.setFont(new java.awt.Font("Times New Roman", 3, 48)); // NOI18N
+        jLabelUsuario1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelUsuario1.setText("< ARCHERY >");
+        getContentPane().add(jLabelUsuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, -1, -1));
+
+        jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo1.png"))); // NOI18N
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -146,7 +152,7 @@ public class Login extends javax.swing.JFrame {
             if (user != null) {
                 limpiarCampos();
                 setVisible(false);
-               // new MenuCuentas(user).setVisible(true);
+               new Menu(user).setVisible(true);
             } else{
                 limpiarCampos();
                 jLabelIncorrecto.setVisible(true);
@@ -161,12 +167,14 @@ public class Login extends javax.swing.JFrame {
               
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabelArco;
+    private javax.swing.JLabel jLabelContraseña;
     private javax.swing.JLabel jLabelCrearCuenta;
     private javax.swing.JLabel jLabelFondo;
     private javax.swing.JLabel jLabelIncorrecto;
-    private javax.swing.JLabel jLabelIncorrecto1;
-    private javax.swing.JLabel jLabelIncorrecto2;
     private javax.swing.JLabel jLabelIniciarSesion;
+    private javax.swing.JLabel jLabelUsuario;
+    private javax.swing.JLabel jLabelUsuario1;
     private javax.swing.JPasswordField jTextContraseña;
     private javax.swing.JTextField jTextUsuario;
     // End of variables declaration//GEN-END:variables

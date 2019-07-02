@@ -51,6 +51,11 @@ public class CrearCuenta extends javax.swing.JFrame {
         jTextUsuario = new javax.swing.JTextField();
         jTextContraseña = new javax.swing.JPasswordField();
         jTextContraseña2 = new javax.swing.JPasswordField();
+        jLabelUsuario = new javax.swing.JLabel();
+        jLabelContraseña = new javax.swing.JLabel();
+        jLabelArco = new javax.swing.JLabel();
+        jLabelContraseña2 = new javax.swing.JLabel();
+        jLabelUsuario1 = new javax.swing.JLabel();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -63,7 +68,7 @@ public class CrearCuenta extends javax.swing.JFrame {
                 jLabelRegresarMouseClicked(evt);
             }
         });
-        getContentPane().add(jLabelRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 470, 200, 80));
+        getContentPane().add(jLabelRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 200, 80));
 
         jLabelCrearCuenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CrearCuenta2.png"))); // NOI18N
         jLabelCrearCuenta.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -71,27 +76,57 @@ public class CrearCuenta extends javax.swing.JFrame {
                 jLabelCrearCuentaMouseClicked(evt);
             }
         });
-        getContentPane().add(jLabelCrearCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 470, 200, 80));
+        getContentPane().add(jLabelCrearCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 300, 200, 80));
 
         jTextUsuario.setBackground(new java.awt.Color(0, 28, 75));
         jTextUsuario.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jTextUsuario.setForeground(new java.awt.Color(255, 255, 255));
         jTextUsuario.setBorder(null);
-        getContentPane().add(jTextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 190, 370, 30));
+        getContentPane().add(jTextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 370, 30));
 
         jTextContraseña.setBackground(new java.awt.Color(0, 28, 75));
         jTextContraseña.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jTextContraseña.setForeground(new java.awt.Color(255, 255, 255));
         jTextContraseña.setBorder(null);
-        getContentPane().add(jTextContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 280, 340, 30));
+        getContentPane().add(jTextContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 370, 30));
 
         jTextContraseña2.setBackground(new java.awt.Color(0, 28, 75));
         jTextContraseña2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jTextContraseña2.setForeground(new java.awt.Color(255, 255, 255));
         jTextContraseña2.setBorder(null);
-        getContentPane().add(jTextContraseña2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 370, 340, 30));
+        getContentPane().add(jTextContraseña2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 370, 30));
 
-        jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/SignIn.png"))); // NOI18N
+        jLabelUsuario.setBackground(new java.awt.Color(0, 0, 0));
+        jLabelUsuario.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabelUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelUsuario.setText("Usuario:");
+        getContentPane().add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
+
+        jLabelContraseña.setBackground(new java.awt.Color(0, 0, 0));
+        jLabelContraseña.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabelContraseña.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelContraseña.setText("Contraseña:");
+        getContentPane().add(jLabelContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
+
+        jLabelArco.setBackground(new java.awt.Color(0, 0, 0));
+        jLabelArco.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabelArco.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelArco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/arco.png"))); // NOI18N
+        getContentPane().add(jLabelArco, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, -10, -1, -1));
+
+        jLabelContraseña2.setBackground(new java.awt.Color(0, 0, 0));
+        jLabelContraseña2.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabelContraseña2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelContraseña2.setText("Confirmar contraseña:");
+        getContentPane().add(jLabelContraseña2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, -1, -1));
+
+        jLabelUsuario1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabelUsuario1.setFont(new java.awt.Font("Times New Roman", 3, 48)); // NOI18N
+        jLabelUsuario1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelUsuario1.setText("< ARCHERY >");
+        getContentPane().add(jLabelUsuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, -1, -1));
+
+        jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo1.png"))); // NOI18N
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -121,11 +156,7 @@ public class CrearCuenta extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jLabelCrearCuentaMouseClicked
 
-    public Image getIconImage(){
-       Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/Logo2.png"));
-       return retValue;
-   } 
-    
+   
     
     
     
@@ -171,9 +202,14 @@ public class CrearCuenta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabelArco;
+    private javax.swing.JLabel jLabelContraseña;
+    private javax.swing.JLabel jLabelContraseña2;
     private javax.swing.JLabel jLabelCrearCuenta;
     private javax.swing.JLabel jLabelFondo;
     private javax.swing.JLabel jLabelRegresar;
+    private javax.swing.JLabel jLabelUsuario;
+    private javax.swing.JLabel jLabelUsuario1;
     private javax.swing.JPasswordField jTextContraseña;
     private javax.swing.JPasswordField jTextContraseña2;
     private javax.swing.JTextField jTextUsuario;

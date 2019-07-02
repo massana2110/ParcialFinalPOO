@@ -40,6 +40,8 @@ public class IngresarPuntajes extends javax.swing.JFrame {
         jLabelBoton10 = new javax.swing.JLabel();
         jLabelRonda = new javax.swing.JLabel();
         jLabelInsertarPuntaje1 = new javax.swing.JLabel();
+        jLabelBoton0 = new javax.swing.JLabel();
+        jLabelBoton11 = new javax.swing.JLabel();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,34 +51,34 @@ public class IngresarPuntajes extends javax.swing.JFrame {
         getContentPane().add(jLabelDiana, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 30, 500, 590));
 
         jLabelBoton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/1.png"))); // NOI18N
-        getContentPane().add(jLabelBoton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, -1, -1));
+        getContentPane().add(jLabelBoton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
 
         jLabelBoton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/2.png"))); // NOI18N
-        getContentPane().add(jLabelBoton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, -1, -1));
+        getContentPane().add(jLabelBoton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, -1, -1));
 
         jLabelBoton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/3.png"))); // NOI18N
-        getContentPane().add(jLabelBoton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, -1, -1));
+        getContentPane().add(jLabelBoton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, -1, -1));
 
         jLabelBoton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/4.png"))); // NOI18N
-        getContentPane().add(jLabelBoton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, -1, -1));
+        getContentPane().add(jLabelBoton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
 
         jLabelBoton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/5.1.png"))); // NOI18N
-        getContentPane().add(jLabelBoton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, -1, -1));
+        getContentPane().add(jLabelBoton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, -1, -1));
 
         jLabelBoton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/6.png"))); // NOI18N
-        getContentPane().add(jLabelBoton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 260, -1, -1));
+        getContentPane().add(jLabelBoton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, -1, -1));
 
         jLabelBoton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/7.png"))); // NOI18N
-        getContentPane().add(jLabelBoton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, -1, -1));
+        getContentPane().add(jLabelBoton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, -1, -1));
 
         jLabelBoton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/8.png"))); // NOI18N
-        getContentPane().add(jLabelBoton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, -1, -1));
+        getContentPane().add(jLabelBoton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, -1, -1));
 
         jLabelBoton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/9.png"))); // NOI18N
-        getContentPane().add(jLabelBoton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, -1, -1));
+        getContentPane().add(jLabelBoton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, -1, -1));
 
         jLabelBoton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/10.png"))); // NOI18N
-        getContentPane().add(jLabelBoton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 490, -1, -1));
+        getContentPane().add(jLabelBoton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 450, -1, -1));
 
         jLabelRonda.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabelRonda.setForeground(new java.awt.Color(255, 255, 255));
@@ -88,11 +90,28 @@ public class IngresarPuntajes extends javax.swing.JFrame {
         jLabelInsertarPuntaje1.setText("Inserte su puntaje :");
         getContentPane().add(jLabelInsertarPuntaje1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 360, 80));
 
+        jLabelBoton0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/0.png"))); // NOI18N
+        getContentPane().add(jLabelBoton0, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, -1, -1));
+
+        jLabelBoton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Regresar.png"))); // NOI18N
+        jLabelBoton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelBoton11MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabelBoton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 580, -1, -1));
+
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo.png"))); // NOI18N
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabelBoton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBoton11MouseClicked
+        // TODO add your handling code here:
+        
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabelBoton11MouseClicked
 
     /**
      * @param args the command line arguments
@@ -130,8 +149,10 @@ public class IngresarPuntajes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabelBoton0;
     private javax.swing.JLabel jLabelBoton1;
     private javax.swing.JLabel jLabelBoton10;
+    private javax.swing.JLabel jLabelBoton11;
     private javax.swing.JLabel jLabelBoton2;
     private javax.swing.JLabel jLabelBoton3;
     private javax.swing.JLabel jLabelBoton4;
