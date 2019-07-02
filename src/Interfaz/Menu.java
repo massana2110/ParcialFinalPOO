@@ -77,7 +77,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void jLabelPuntajeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelPuntajeMouseClicked
         // TODO add your handling code here:
-        new IngresarPuntajes().setVisible(true);
+        new IngresarPuntajes1(user).setVisible(true);
        
     }//GEN-LAST:event_jLabelPuntajeMouseClicked
 

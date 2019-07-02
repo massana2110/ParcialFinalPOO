@@ -72,28 +72,7 @@ public class DBQuery {
         }
         return usuario;
     }
-    
- 
-    public boolean añadirRonda(int p1, int p2, int p3) throws SQLException{
-        String query = "INSERT INTO ronda (p1,p2,p3) VALUES (?,?,?)";
-        try{
-            Connection con = conexion.getConnection();
-            PreparedStatement ps = con.prepareStatement(query);
-            ps.setInt(1, p1);
-            ps.setInt(2, p2);
-            ps.setInt(3, p3);
-            
-            if (ps.executeUpdate() > 0) {
-                return true;
-            }
-        } catch(SQLException e){
-            e.printStackTrace();
-            return false;
-        }
-        return false;
-    }
-    
-    
+   
     public String MD5(String md5){
         try{
             java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
@@ -109,6 +88,26 @@ public class DBQuery {
         return null;
     }
       
+        
+     public boolean registrarRonda(int puntaje1, int puntaje2, int puntaje3){
+        String query = "INSERT INTO ronda (p1,p2,p3) VALUES (?,?,?)";
+        try{
+            Connection con = conexion.getConnection();
+            PreparedStatement pstm = con.prepareStatement(query);
+            pstm.setInt(1, puntaje1);
+            pstm.setInt(2, puntaje2);
+            pstm.setInt(3,puntaje3);
+            
+            if(pstm.executeUpdate() > 0){
+                return true;
+            }
+        } catch(Exception error){
+            error.printStackTrace();
+            return false;
+        } 
+        
+        return true;
+    }
         
    
    
